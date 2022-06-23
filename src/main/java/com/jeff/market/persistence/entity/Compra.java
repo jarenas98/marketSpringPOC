@@ -25,7 +25,7 @@ public class Compra {
 
     private String estado;
 
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProducto> comprasProductos;
 
     @ManyToOne
